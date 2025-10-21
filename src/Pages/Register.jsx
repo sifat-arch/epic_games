@@ -1,27 +1,52 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { AuthContext } from "../assets/context/AuthContext";
+import { Link } from "react-router";
 
 const Register = () => {
+  const [error, setError] = useState(false);
+
   //contexts
 
-  const { registerUser } = useContext(AuthContext);
+  const { registerUser, updateUser, signInWithGoogle } =
+    useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
-    const photo = form.photo.value;
+    const displayName = form.name.value;
+    const photoURL = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
+
+    const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    if (!regex.test(password)) {
+      setError(true);
+      return;
+    } else {
+      setError(false);
+    }
 
     // register user with email and password
     registerUser(email, password)
       .then((res) => {
         console.log(res);
         alert("register successfully");
+        // update user
+        updateUser(displayName, photoURL).then(() => alert("User updated"));
       })
+      .catch((err) => console.log(err))
       .then((err) => {
         console.log(err);
       });
+  };
+
+  const handleGoogle = () => {
+    signInWithGoogle()
+      .then((res) => {
+        console.log(res.user);
+        alert("google Register successful");
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <div className="hero bg-gray-200 min-h-screen">
@@ -72,6 +97,13 @@ const Register = () => {
                 placeholder="Password"
                 required
               />
+
+              {error ? (
+                <p className="text-red-500 text-lg">password is invailed</p>
+              ) : (
+                ""
+              )}
+
               <div>
                 <a className="link link-hover textarea-md ">Forgot password?</a>
               </div>
@@ -80,7 +112,10 @@ const Register = () => {
               </button>
             </form>
             {/* google btn */}
-            <button className="btn bg-white text-black border-[#e5e5e5] mt-2">
+            <button
+              className="btn bg-white text-black border-[#e5e5e5] mt-2"
+              onClick={handleGoogle}
+            >
               <svg
                 aria-label="Google logo"
                 width="30"
@@ -110,6 +145,13 @@ const Register = () => {
               </svg>
               Login with Google
             </button>
+
+            <p className="text-center mt-2 text-lg font-semibold">
+              Already have an account?{" "}
+              <Link className="text-blue-500 underline" to="/login">
+                Login
+              </Link>
+            </p>
           </div>
         </div>
       </div>

@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
 import { AuthContext } from "../context/AuthContext";
 
 const Register = () => {
   const [error, setError] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   //contexts
 
@@ -35,6 +37,7 @@ const Register = () => {
         // update user
         updateUser(displayName, photoURL).then(() => alert("User updated"));
         setLoading(false);
+        navigate(location.state || "/");
       })
       .catch((err) => console.log(err))
       .then((err) => {

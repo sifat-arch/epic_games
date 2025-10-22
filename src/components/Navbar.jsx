@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../assets/logo.png";
 import { AuthContext } from "../context/AuthContext";
+import { IoLogOutOutline } from "react-icons/io5";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
@@ -153,6 +154,9 @@ const Navbar = () => {
             className="btn px-6 hover:bg-black hover:text-white hover:transition"
             onClick={handleSignOut}
           >
+            <span>
+              <IoLogOutOutline size={23} />
+            </span>
             Logout
           </button>
         </div>

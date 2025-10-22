@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { AuthContext } from "../assets/context/AuthContext";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
+import useDocumentTitle from "../CustomHook/useDocumentTitle";
 
 const Login = () => {
-  const { signInWithGoogle, logInUser } = useContext(AuthContext);
+  const { signInWithGoogle, logInUser, setLoading } = useContext(AuthContext);
+  const emailRef = useRef();
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -12,6 +16,8 @@ const Login = () => {
       .then((res) => {
         console.log(res.user);
         alert("Log in successful");
+        setLoading(false);
+        navigate(location.state);
       })
       .catch((err) => console.log(err));
   };
@@ -21,9 +27,17 @@ const Login = () => {
       .then((res) => {
         console.log(res.user);
         alert("google Register successful");
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   };
+
+  const handleForgetPass = () => {
+    const email = emailRef.current.value;
+    navigate("/forget-password", { state: { email } });
+  };
+
+  useDocumentTitle("Login");
 
   return (
     <div className="hero bg-gray-200 min-h-screen">
@@ -41,6 +55,7 @@ const Login = () => {
                 name="email"
                 className="input w-full text-xl"
                 placeholder="Email"
+                ref={emailRef}
                 required
               />
               {/* password */}
@@ -54,12 +69,13 @@ const Login = () => {
               />
 
               <div>
-                <Link
+                <p
                   className="link link-hover textarea-md"
                   to="/forget-password"
+                  onClick={handleForgetPass}
                 >
                   Forgot password?
-                </Link>
+                </p>
               </div>
               <button type="submit" className="btn btn-neutral mt-4">
                 Login

@@ -8,6 +8,7 @@ import Other from "../Pages/Other";
 import Error from "../Pages/Error";
 import MyProfle from "../Pages/MyProfile";
 import ForgetPassword from "../Pages/ForgetPassword";
+import PrivetRoute from "../privetRoute/PrivetRoute";
 
 const routes = createBrowserRouter([
   {
@@ -20,7 +21,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "game-details",
-        element: <GameDetails />,
+        element: (
+          <PrivetRoute>
+            <GameDetails />
+          </PrivetRoute>
+        ),
       },
       {
         path: "login",

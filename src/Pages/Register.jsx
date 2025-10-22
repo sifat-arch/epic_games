@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../assets/context/AuthContext";
 import { Link } from "react-router";
+import useDocumentTitle from "../CustomHook/useDocumentTitle";
 
 const Register = () => {
   const [error, setError] = useState(false);
 
   //contexts
 
-  const { registerUser, updateUser, signInWithGoogle } =
+  const { registerUser, updateUser, signInWithGoogle, setLoading } =
     useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
@@ -33,6 +34,7 @@ const Register = () => {
         alert("register successfully");
         // update user
         updateUser(displayName, photoURL).then(() => alert("User updated"));
+        setLoading(false);
       })
       .catch((err) => console.log(err))
       .then((err) => {
@@ -45,9 +47,12 @@ const Register = () => {
       .then((res) => {
         console.log(res.user);
         alert("google Regester success");
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   };
+
+  useDocumentTitle("Register")
   return (
     <div className="hero bg-gray-200 min-h-screen">
       <div className="hero-content flex-col">

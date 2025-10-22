@@ -1,0 +1,202 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknowns Battle Ground: PUBG",
+    "coverPhoto": "https://i.ibb.co.com/fPNHCGN/pubg.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://i.ibb.co.com/fYRFMk1Y/codmobile.webp",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Engage in fast-paced multiplayer battles or try the battle royale mode in COD Mobile.",
+    "ratings": "4.4",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Among Us",
+    "coverPhoto": "https://i.ibb.co.com/DDSF2837/among-us-sus-u67da4xqaq10ubom.webp",
+    "category": "Social Deduction",
+    "downloadLink": "https://www.innersloth.com/gameAmongUs.php",
+    "description": "Find the impostor among your crew and survive the tasks in this online multiplayer game.",
+    "ratings": "4.2",
+    "developer": "InnerSloth"
+  },
+  {
+    "id": "4",
+    "title": "Minecraft",
+    "coverPhoto": "https://i.ibb.co.com/XrLGbTVd/minecraft-mobs-uh52xefk605jdmm6.webp",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Build, explore, and survive in a blocky 3D world with endless possibilities.",
+    "ratings": "4.6",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "5",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://i.ibb.co.com/TDzk7bqw/clashofclans.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://clashofclans.com/",
+    "description": "Build your village, train troops, and battle with millions of players online.",
+    "ratings": "4.3",
+    "developer": "Supercell"
+  },
+  {
+    "id": "6",
+    "title": "Fortnite",
+    "coverPhoto": "https://i.ibb.co.com/DHXnNQzP/fortnight.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.epicgames.com/fortnite/en-US/home",
+    "description": "Jump into the battle royale arena with constant updates, challenges, and skins.",
+    "ratings": "4.4",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "7",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://i.ibb.co.com/G4H4mdym/genshin.jpg",
+    "category": "RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "Explore a vast open world, fight enemies, and unlock powerful characters in this RPG.",
+    "ratings": "4.6",
+    "developer": "miHoYo"
+  },
+  {
+    "id": "8",
+    "title": "Candy Crush Saga",
+    "coverPhoto": "https://i.ibb.co.com/7N8ByLJ6/candy.jpg",
+    "category": "Puzzle",
+    "downloadLink": "https://king.com/game/candycrush",
+    "description": "Match candies and clear levels in this addictive puzzle game.",
+    "ratings": "4.1",
+    "developer": "King"
+  },
+  {
+    "id": "9",
+    "title": "Subway Surfers",
+    "coverPhoto": "https://i.ibb.co.com/20nFJRhj/subway.jpg",
+    "category": "Endless Runner",
+    "downloadLink": "https://www.kiloo.com/games/subway-surfers",
+    "description": "Dash through subways, dodge trains, and collect coins in this endless runner game.",
+    "ratings": "4.3",
+    "developer": "Kiloo & SYBO Games"
+  },
+  {
+    "id": "10",
+    "title": "League of Legends: Wild Rift",
+    "coverPhoto": "https://i.ibb.co.com/9Hg3w5d7/legueof-Legends.jpg",
+    "category": "MOBA",
+    "downloadLink": "https://wildrift.leagueoflegends.com/",
+    "description": "Enjoy the mobile version of LoL with fast-paced 5v5 battles.",
+    "ratings": "4.5",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "11",
+    "title": "Clash Royale",
+    "coverPhoto": "https://i.ibb.co.com/Y48br6GT/clashroyals.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://clashroyale.com/",
+    "description": "Battle players worldwide in real-time strategy and collect cards to strengthen your deck.",
+    "ratings": "4.4",
+    "developer": "Supercell"
+  },
+  {
+    "id": "12",
+    "title": "Asphalt 9: Legends",
+    "coverPhoto": "https://i.ibb.co.com/FfzBFLp/asphalt9.png",
+    "category": "Racing",
+    "downloadLink": "https://asphaltlegends.com/",
+    "description": "Race high-performance cars on stunning tracks in this arcade racing game.",
+    "ratings": "4.5",
+    "developer": "Gameloft"
+  },
+  {
+    "id": "13",
+    "title": "Pokemon Go",
+    "coverPhoto": "https://i.ibb.co.com/s9vfLPzV/phokemongo.jpg",
+    "category": "AR",
+    "downloadLink": "https://pokemongolive.com/",
+    "description": "Catch Pokémon in the real world using augmented reality with friends and players worldwide.",
+    "ratings": "4.2",
+    "developer": "Niantic"
+  },
+  {
+    "id": "14",
+    "title": "Roblox",
+    "coverPhoto": "https://i.ibb.co.com/Q743hx5P/roblox.jpg",
+    "category": "Sandbox",
+    "downloadLink": "https://www.roblox.com/",
+    "description": "Create, play, and share games made by a massive online community.",
+    "ratings": "4.3",
+    "developer": "Roblox Corporation"
+  },
+  {
+    "id": "15",
+    "title": "Temple Run 2",
+    "coverPhoto": "https://i.ibb.co.com/d4gNhKc9/templerun.jpg",
+    "category": "Endless Runner",
+    "downloadLink": "https://www.imangistudios.com/templerun2",
+    "description": "Run, jump, and slide to escape the evil demon in this endless running game.",
+    "ratings": "4.2",
+    "developer": "Imangi Studios"
+  },
+  {
+    "id": "16",
+    "title": "AFK Arena",
+    "coverPhoto": "https://i.ibb.co.com/HpRqxGsH/afkarana.jpg",
+    "category": "RPG",
+    "downloadLink": "https://www.lilithgames.com/en/afk-arena/",
+    "description": "Collect heroes, build a team, and progress even while offline in this RPG game.",
+    "ratings": "4.4",
+    "developer": "Lilith Games"
+  },
+  {
+    "id": "17",
+    "title": "Brawl Stars",
+    "coverPhoto": "https://i.ibb.co.com/Q3WmrfWj/brawlstar.webp",
+    "category": "MOBA",
+    "downloadLink": "https://supercell.com/en/games/brawlstars/",
+    "description": "Fast-paced multiplayer arena battles with various characters and abilities.",
+    "ratings": "4.5",
+    "developer": "Supercell"
+  },
+  {
+    "id": "18",
+    "title": "Free Fire",
+    "coverPhoto": "https://i.ibb.co.com/gb616VZJ/freefire.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Survive the island in this quick and intense battle royale game.",
+    "ratings": "4.2",
+    "developer": "Garena"
+  },
+  {
+    "id": "19",
+    "title": "Dead by Daylight Mobile",
+    "coverPhoto": "https://i.ibb.co.com/rGr8mscd/deadbyday.jpg",
+    "category": "Horror",
+    "downloadLink": "https://www.deadbydaylight.com/mobile",
+    "description": "Survive as a survivor or hunt down players as the killer in this asymmetrical horror game.",
+    "ratings": "4.1",
+    "developer": "Behaviour Interactive"
+  },
+  {
+    "id": "20",
+    "title": "Hearthstone",
+    "coverPhoto": "https://i.ibb.co.com/21mW0szG/hearthstone.jpg",
+    "category": "Card Game",
+    "downloadLink": "https://playhearthstone.com/",
+    "description": "Collect cards, build decks, and duel players in this strategic card game.",
+    "ratings": "4.3",
+    "developer": "Blizzard Entertainment"
+  }
+]

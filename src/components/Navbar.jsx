@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../assets/logo.png";
 import { AuthContext } from "../assets/context/AuthContext";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleSignOut = () => {
     signOutUser()
       .then(() => alert("sign out successful"))
       .catch((err) => console.log(err));
+    navigate("/login");
   };
 
   return (
@@ -85,30 +87,38 @@ const Navbar = () => {
               Game Details
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/login"
-              className={({ isActive }) =>
-                `font-semibold ${
-                  isActive ? "bg-black text-white shadow-md scale-105" : ""
-                }`
-              }
-            >
-              Login
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/register"
-              className={({ isActive }) =>
-                `font-semibold ${
-                  isActive ? "bg-black text-white shadow-md scale-105" : ""
-                }`
-              }
-            >
-              Register
-            </NavLink>
-          </li>
+
+          {!user ? (
+            <>
+              <li>
+                <NavLink
+                  to="/login"
+                  className={({ isActive }) =>
+                    `font-semibold ${
+                      isActive ? "bg-black text-white shadow-md scale-105" : ""
+                    }`
+                  }
+                >
+                  Login
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/register"
+                  className={({ isActive }) =>
+                    `font-semibold ${
+                      isActive ? "bg-black text-white shadow-md scale-105" : ""
+                    }`
+                  }
+                >
+                  Register
+                </NavLink>
+              </li>
+            </>
+          ) : (
+            ""
+          )}
+
           <li>
             <NavLink
               to="/other"

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
 import Banner from "../components/Banner";
 import PopularGames from "../components/PopularGames";
+import NewsLetter from "../components/NewsLetter";
 
 const Home = () => {
   useDocumentTitle("Home");
@@ -19,11 +20,11 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Home page</h1>
-
       <Banner sliderData={sliderData} />
 
       <PopularGames sliderData={sliderData} />
+
+      <NewsLetter />
     </div>
   );
 };

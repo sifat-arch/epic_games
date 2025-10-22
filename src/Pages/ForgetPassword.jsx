@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../assets/context/AuthContext";
+
 import { useLocation } from "react-router";
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
+import { AuthContext } from "../context/AuthContext";
 
 const ForgetPassword = () => {
   const { resetPaswword } = useContext(AuthContext);

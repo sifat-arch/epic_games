@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import { AuthContext } from "../assets/context/AuthContext";
+
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
+import { AuthContext } from "../context/AuthContext";
 
 const MyProfile = () => {
   useDocumentTitle("My-profile");

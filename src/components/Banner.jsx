@@ -5,7 +5,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 const Banner = ({ sliderData }) => {
   return (
-    <div className="mt-2">
+    <div className="mt-8">
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation

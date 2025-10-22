@@ -18,7 +18,7 @@ const PopularGames = ({ sliderData }) => {
       <h1 className="text-center text-4xl font-bold">Most popular Games</h1>
       <div className="flex gap-5 justify-center">
         {sortedSliderData.map((data) => (
-          <div className="mt-5">
+          <div className="mt-5" key={data.id}>
             <div className="max-w-[600px]  bg-white rounded-lg shadow-lg overflow-hidden  hover:shadow-xl transition-shadow duration-300">
               <div className="relative">
                 <img

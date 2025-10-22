@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import { AuthContext } from "../assets/context/AuthContext";
 import { Link } from "react-router";
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
+import { AuthContext } from "../context/AuthContext";
 
 const Register = () => {
   const [error, setError] = useState(false);
@@ -52,7 +52,7 @@ const Register = () => {
       .catch((err) => console.log(err));
   };
 
-  useDocumentTitle("Register")
+  useDocumentTitle("Register");
   return (
     <div className="hero bg-gray-200 min-h-screen">
       <div className="hero-content flex-col">

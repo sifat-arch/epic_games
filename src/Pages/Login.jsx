@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
-import { AuthContext } from "../assets/context/AuthContext";
 import { Link, useLocation, useNavigate } from "react-router";
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const { signInWithGoogle, logInUser, setLoading } = useContext(AuthContext);

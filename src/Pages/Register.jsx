@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../assets/context/AuthContext";
 import { Link } from "react-router";
 
@@ -44,7 +44,7 @@ const Register = () => {
     signInWithGoogle()
       .then((res) => {
         console.log(res.user);
-        alert("google Register successful");
+        alert("google Regester success");
       })
       .catch((err) => console.log(err));
   };
@@ -104,9 +104,6 @@ const Register = () => {
                 ""
               )}
 
-              <div>
-                <a className="link link-hover textarea-md ">Forgot password?</a>
-              </div>
               <button type="submit" className="btn btn-neutral mt-4">
                 Register
               </button>

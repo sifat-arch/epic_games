@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../assets/logo.png";
 import { AuthContext } from "../context/AuthContext";
 import { IoLogOutOutline } from "react-icons/io5";
+import { motion, spring } from "framer-motion";
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
@@ -150,15 +151,17 @@ const Navbar = () => {
 
       {user ? (
         <div className="">
-          <button
+          <motion.button
             className="btn px-6 hover:bg-black hover:text-white hover:transition"
             onClick={handleSignOut}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <span>
               <IoLogOutOutline size={23} />
             </span>
             Logout
-          </button>
+          </motion.button>
         </div>
       ) : (
         ""

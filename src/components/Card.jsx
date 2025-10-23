@@ -1,11 +1,17 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Card = ({ game }) => {
   const { category, coverPhoto, description, developer, ratings, title } = game;
 
   return (
-    <div className="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden  hover:shadow-xl transition-shadow duration-300">
+    <motion.div
+      className="max-w-xs bg-white rounded-lg shadow-lg overflow-hidden  hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 300, damping: 15 }}
+    >
       <div className="relative">
         <img
           src={coverPhoto}
@@ -31,7 +37,7 @@ const Card = ({ game }) => {
           Download
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

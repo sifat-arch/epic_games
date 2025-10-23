@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/email-6993266_1280.png";
+import { motion } from "framer-motion";
 
 const NewsLetter = () => {
   return (
@@ -21,9 +22,13 @@ const NewsLetter = () => {
             placeholder="Your email"
           />
 
-          <button className="btn w-full hover:bg-red-500 hover:text-white">
+          <motion.button
+            className="btn w-full hover:bg-red-500 hover:text-white"
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
             Subscribe
-          </button>
+          </motion.button>
         </div>
       </div>
     </div>

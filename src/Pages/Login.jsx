@@ -28,6 +28,7 @@ const Login = () => {
         console.log(res.user);
         alert("google Register successful");
         setLoading(false);
+        navigate(location.state || "/");
       })
       .catch((err) => console.log(err));
   };

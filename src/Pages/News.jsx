@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NewsDetails from "../components/NewsDetails";
+import useDocumentTitle from "../CustomHook/useDocumentTitle";
 
 const News = () => {
   const [newsData, setNewsData] = useState([]);
@@ -9,6 +10,8 @@ const News = () => {
       .then((res) => res.json())
       .then((data) => setNewsData(data));
   }, []);
+
+  useDocumentTitle("News");
 
   return (
     <div>

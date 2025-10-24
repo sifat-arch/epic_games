@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { toast } from "react-toastify";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router";
+import useDocumentTitle from "../CustomHook/useDocumentTitle";
 
 const UserUpdate = () => {
   const { updateUser, setLoading } = useContext(AuthContext);
@@ -25,6 +26,8 @@ const UserUpdate = () => {
         toast.error(err.message);
       });
   };
+
+  useDocumentTitle("User Update");
   return (
     <div className="min-h-screen mt-16 flex items-center justify-center bg-[#252e40] p-4">
       <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8 sm:p-10">

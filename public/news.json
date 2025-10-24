@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co.com/QFM95LC2/cod2.jpg",
+    "title": "Call of Duty: Modern Warfare II Releases Today",
+    "summary": "The latest installment of the Call of Duty series is now available on PC, PS5, and Xbox Series X/S. This release features stunning graphics, new multiplayer modes, and an expanded storyline that continues the saga of the iconic characters. Players can explore new maps, engage in tactical missions, and experience the next level of immersive combat.",
+    "date": "2025-10-25",
+    "link": "/news/cod-modern-warfare-ii"
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co.com/W4VYGBFv/fifa.jpg",
+    "title": "FIFA 26 Officially Announced",
+    "summary": "EA Sports has officially announced FIFA 26, bringing improved gameplay mechanics, enhanced AI for smarter opponent behavior, and a range of new leagues and tournaments. Fans can look forward to better player animations, realistic physics, and updated rosters that reflect the latest football season.",
+    "date": "2025-10-20",
+    "link": "/news/fifa-26-announcement"
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co.com/5XvSgSd7/eden.jpg",
+    "title": "Elden Ring Expansion Coming Soon",
+    "summary": "FromSoftware reveals an upcoming expansion for Elden Ring that introduces new areas, bosses, and storylines. Players will embark on challenging quests, encounter terrifying new creatures, and explore previously unseen landscapes. The expansion promises to deepen the lore of the Elden Ring universe while providing exciting gameplay for both veterans and newcomers.",
+    "date": "2025-10-18",
+    "link": "/news/elden-ring-expansion"
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co.com/W4xfPxc6/minecraft.jpg",
+    "title": "Minecraft 1.25 Update Released",
+    "summary": "The 1.25 update for Minecraft introduces new biomes, mobs, and blocks, enriching the building and exploration experience. Players can discover hidden treasures, encounter unique creatures, and utilize new crafting recipes to enhance their worlds. The update also brings technical improvements and bug fixes to ensure smoother gameplay.",
+    "date": "2025-10-15",
+    "link": "/news/minecraft-1-25"
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co.com/ccP5s2ft/skybeond.png",
+    "title": "New Indie Game 'Skybound' Launches",
+    "summary": "'Skybound' offers an open-world adventure with unique flying mechanics and beautifully designed landscapes. Players can explore floating islands, complete intricate puzzles, and uncover hidden secrets. The game focuses on creativity and freedom, allowing players to chart their own path in an expansive, immersive world. Available now on Steam and Epic Games Store.",
+    "date": "2025-10-10",
+    "link": "/news/skybound-launch"
+  }
+]

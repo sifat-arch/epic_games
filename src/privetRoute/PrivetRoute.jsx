@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Loading from "../components/Loading";
 
 import { Navigate, useLocation } from "react-router";
 import { AuthContext } from "../context/AuthContext";
@@ -8,7 +9,7 @@ const PrivetRoute = ({ children }) => {
   const location = useLocation();
 
   if (loading) {
-    return <p className="text-4xl text-red-500">Loading...</p>;
+    return <Loading />;
   }
 
   if (!user) {

@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-
 import { useLocation } from "react-router";
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
 import { AuthContext } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 const ForgetPassword = () => {
   const { resetPaswword } = useContext(AuthContext);
@@ -20,41 +20,66 @@ const ForgetPassword = () => {
 
     resetPaswword(email)
       .then(() => {
-        alert("Password reset email send");
+        toast.success("Password reset email sent!");
         // Redirect user to Gmail
-        window.location.href = "https://mail.google.com/";
+        window.open("https://mail.google.com/", "_blank");
       })
-
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.message);
+      });
   };
 
-  useDocumentTitle("Forget-password");
-  return (
-    <div className="hero bg-gray-200 min-h-screen">
-      <div className="hero-content flex-col">
-        <div className="text-center ">
-          <h1 className="text-5xl font-bold"></h1>
-        </div>
-        <div className="card bg-base-100 w-[600px] shrink-0 shadow-2xl">
-          <div className="card-body h-auto">
-            <form className="fieldset" onSubmit={handleForgetPass}>
-              {/* email */}
-              <label className="label text-xl font-semibold">Email</label>
-              <input
-                type="email"
-                name="email"
-                className="input w-full text-xl"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+  useDocumentTitle("Forget Password");
 
-              <button type="submit" className="btn btn-neutral mt-4">
-                Send a Varification email
-              </button>
-            </form>
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-[#252e40] p-4">
+      <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8 sm:p-10">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
+            Reset Password
+          </h1>
+          <p className="text-gray-500 mt-2">
+            Enter your email to receive a password reset link
+          </p>
+        </div>
+
+        <form onSubmit={handleForgetPass} className="space-y-5">
+          {/* Email Field */}
+          <div>
+            <label className="block text-gray-700 font-semibold mb-1">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              className="w-full px-4 py-3 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-lg"
+              placeholder="Enter your registered email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full py-3 bg-[#06b6d4] hover:bg-[#007777] text-white font-semibold rounded-xl transition-all duration-300"
+          >
+            Send Verification Email
+          </button>
+        </form>
+
+        <div className="text-center mt-6">
+          <p className="text-gray-600">
+            Remember your password?{" "}
+            <a
+              href="/login"
+              className="text-[#06b6d4] font-semibold hover:underline"
+            >
+              Go to Login
+            </a>
+          </p>
         </div>
       </div>
     </div>

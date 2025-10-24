@@ -5,13 +5,13 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 const Banner = ({ sliderData }) => {
   return (
-    <div className="mt-8">
+    <div className="mt-19">
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop={true}
-        slidesPreview={1}
+        slidesPerView={1}
         className="w-full h-[300px] md:h-[500px]"
       >
         {sliderData.map((data) => (

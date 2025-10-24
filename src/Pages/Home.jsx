@@ -11,8 +11,6 @@ const Home = () => {
 
   const sliderData = gameData.slice(0, 3);
 
-  console.log(sliderData);
-
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())

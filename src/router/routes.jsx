@@ -4,11 +4,12 @@ import Home from "../Pages/Home";
 import GameDetails from "../Pages/GameDetails";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
-import Other from "../Pages/Other";
+
 import Error from "../Pages/Error";
 import MyProfle from "../Pages/MyProfile";
 import ForgetPassword from "../Pages/ForgetPassword";
 import PrivetRoute from "../privetRoute/PrivetRoute";
+import News from "../Pages/News";
 
 const routes = createBrowserRouter([
   {
@@ -36,8 +37,8 @@ const routes = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "other",
-        element: <Other />,
+        path: "news",
+        element: <News />,
       },
       {
         path: "my-profile",

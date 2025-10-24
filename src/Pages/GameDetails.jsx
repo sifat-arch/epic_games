@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 
 const promiseData = fetch("/data.json").then((res) => res.json());
 
-console.log(promiseData);
-
 const GameDetails = () => {
   useDocumentTitle("Game-details");
   return (

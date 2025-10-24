@@ -11,12 +11,13 @@ const PopularGames = ({ sliderData }) => {
   const sortedSliderData = [...sliderData].sort(
     (b, a) => Number(b.ratings) - Number(a.ratings)
   );
-  console.log(sortedSliderData);
 
   return (
-    <div className="my-8 cursor-pointer">
-      <h1 className="text-center text-4xl font-bold">Most popular Games</h1>
-      <div className="flex gap-5 justify-center">
+    <div className="my-22 cursor-pointer">
+      <h1 className="text-center text-4xl font-bold">
+        Most popular <span className="text-[#06b6d4]">Games</span>{" "}
+      </h1>
+      <div className="flex flex-col md:flex-row px-2 gap-5 justify-center">
         {sortedSliderData.map((data) => (
           <motion.div
             className="mt-5"
@@ -26,7 +27,7 @@ const PopularGames = ({ sliderData }) => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 15 }}
           >
-            <div className="max-w-[600px]  bg-white rounded-lg shadow-lg overflow-hidden  hover:shadow-xl transition-shadow duration-300">
+            <div className="lg:max-w-[600px] p-3 md:p-0  bg-white rounded-lg shadow-lg overflow-hidden  hover:shadow-xl transition-shadow duration-300">
               <div className="relative">
                 <img
                   src={data.coverPhoto}
@@ -40,8 +41,7 @@ const PopularGames = ({ sliderData }) => {
 
               <div className="p-4">
                 <h2 className="text-2xl font-bold mb-1">{data.title}</h2>
-                <p className="text-xl text-gray-500 mb-2">{data.developer}</p>
-                <p className="text-gray-700 text-sm">{data.description}</p>
+
                 <p className="mt-2 text-2xl font-bold text-yellow-700 flex items-center gap-2">
                   <span>
                     <FaStar />

@@ -4,9 +4,11 @@ import useDocumentTitle from "../CustomHook/useDocumentTitle";
 import { AuthContext } from "../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const [error, setError] = useState(false);
+  const [show, setShow] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -61,6 +63,10 @@ const Register = () => {
         console.log(err);
         toast.error(err.message);
       });
+  };
+
+  const handleShow = () => {
+    setShow(!show);
   };
 
   useDocumentTitle("Register");
@@ -121,17 +127,24 @@ const Register = () => {
           </div>
 
           {/* Password */}
-          <div>
+          <div className="relative">
             <label className="block text-gray-700 font-semibold mb-1">
               Password
             </label>
             <input
-              type="password"
+              type={show ? "text" : "password"}
               name="password"
               className="w-full px-4 py-3 border-b border-gray-300  focus:outline-none focus:ring-2 focus:ring-[#06b6d4] text-lg"
               placeholder="Enter a strong password"
               required
             />
+
+            <span
+              className="absolute top-12 left-86 cursor-pointer z-50"
+              onClick={handleShow}
+            >
+              {show ? <FaEyeSlash /> : <FaEye />}
+            </span>
           </div>
 
           {error && (

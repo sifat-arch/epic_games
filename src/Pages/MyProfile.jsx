@@ -2,16 +2,19 @@ import React, { useContext } from "react";
 
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
 import { AuthContext } from "../context/AuthContext";
+import { Link } from "react-router";
 
 const MyProfile = () => {
   useDocumentTitle("My-profile");
   const { user, loading } = useContext(AuthContext);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return "Loading...";
   }
 
   const photoUrl = user.providerData[0].photoURL;
+
+  console.log(user);
 
   return (
     <div className="flex justify-center bg-[#252e40] items-center  h-screen ">
@@ -34,6 +37,9 @@ const MyProfile = () => {
             {user?.displayName}
           </p>
         )}
+        <button className="btn w-full bg-cyan-400 text-white">
+          <Link to="/user-update">Update Info</Link>
+        </button>
       </div>
     </div>
   );

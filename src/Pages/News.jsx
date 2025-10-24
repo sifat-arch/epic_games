@@ -10,8 +10,6 @@ const News = () => {
       .then((data) => setNewsData(data));
   }, []);
 
-  console.log(newsData);
-
   return (
     <div>
       {newsData.map((news) => (

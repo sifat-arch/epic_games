@@ -10,6 +10,7 @@ import MyProfle from "../Pages/MyProfile";
 import ForgetPassword from "../Pages/ForgetPassword";
 import PrivetRoute from "../privetRoute/PrivetRoute";
 import News from "../Pages/News";
+import UserUpdate from "../Pages/UserUpdate";
 
 const routes = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const routes = createBrowserRouter([
       {
         path: "forget-password",
         element: <ForgetPassword />,
+      },
+      {
+        path: "user-update",
+        element: <UserUpdate />,
       },
     ],
   },

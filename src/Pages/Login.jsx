@@ -1,12 +1,14 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
 import { AuthContext } from "../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const { signInWithGoogle, logInUser, setLoading } = useContext(AuthContext);
+  const [show, setShow] = useState(false);
   const emailRef = useRef();
   const location = useLocation();
   const navigate = useNavigate();
@@ -23,8 +25,8 @@ const Login = () => {
         navigate(location.state || "/");
       })
       .catch((err) => {
-          console.log(err)
-          toast.error(err.message)
+        console.log(err);
+        toast.error(err.message);
       });
   };
 
@@ -45,6 +47,10 @@ const Login = () => {
   const handleForgetPass = () => {
     const email = emailRef.current.value;
     navigate("/forget-password", { state: { email } });
+  };
+
+  const handleShow = () => {
+    setShow(!show);
   };
 
   useDocumentTitle("Login");
@@ -78,17 +84,24 @@ const Login = () => {
           </div>
 
           {/* Password */}
-          <div>
+          <div className="relative">
             <label className="block text-gray-700 font-semibold mb-1">
               Password
             </label>
             <input
-              type="password"
+              type={show ? "text" : "password"}
               name="password"
               placeholder="Enter your password"
               required
               className="w-full px-4 py-3 border-b border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#06b6d4] text-lg"
             />
+
+            <span
+              className="absolute top-12 left-83 cursor-pointer z-50"
+              onClick={handleShow}
+            >
+              {show ? <FaEyeSlash /> : <FaEye />}
+            </span>
           </div>
 
           {/* Forgot password */}

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import useDocumentTitle from "../CustomHook/useDocumentTitle";
 import { AuthContext } from "../context/AuthContext";
 import { toast } from "react-toastify";
@@ -8,6 +8,7 @@ const ForgetPassword = () => {
   const { resetPaswword } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (location.state?.email) {
@@ -23,6 +24,7 @@ const ForgetPassword = () => {
         toast.success("Password reset email sent!");
         // Redirect user to Gmail
         window.open("https://mail.google.com/", "_blank");
+        navigate("/login");
       })
       .catch((err) => {
         console.log(err);

@@ -46,6 +46,8 @@ cd Epic-Games
 
 # Install dependencies
 npm install
+# Run the development server
+npm run dev
 ```
 ##Live Link
 https://gregarious-kangaroo-a35099.netlify.app/
